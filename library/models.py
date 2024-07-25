@@ -10,7 +10,7 @@ class BookModel(models.Model):
     price = models.DecimalField(max_digits=15, decimal_places=2)
 
     def __str__(self):
-        return f"{self.autor} : {self.title}"
+        return f"{self.author} : {self.title}"
     
     class Meta:
         db_table = 'Books'

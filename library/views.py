@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import BookModel
+from .serializers import BookSerializers
+
+
+class BookListApiView(generics.ListAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
