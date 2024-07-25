@@ -5,6 +5,7 @@ class BookModel(models.Model):
     
     title = models.CharField(max_length=250)
     subtitle = models.CharField(max_length=250)
+    content = models.TextField()
     author = models.CharField(max_length=50)
     isbn = models.CharField(max_length=13)
     price = models.DecimalField(max_digits=15, decimal_places=2)
