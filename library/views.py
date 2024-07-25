@@ -37,4 +37,33 @@ class BookUpdateApiView(generics.UpdateAPIView):
     serializer_class = BookSerializers
     
     
+class BookCreateApiView(generics.CreateAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
+    
+
+class BookListCreateApiView(generics.ListCreateAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
+    
+    
+class BookDetailUpdateApiView(generics.RetrieveUpdateAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
+    
+    
+class BookDetailDestroyApiView(generics.RetrieveDestroyAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
+
+
+class BookDetailUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
+    
+    queryset = BookModel.objects.all()
+    serializer_class = BookSerializers
+    
         
